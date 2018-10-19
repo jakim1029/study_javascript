@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반복문</title>
+    <script>
+
+        // for문
+        for(var i = 0; i < 100; i ++){
+            console.log('춤을 춘다. 뱅글뱅글 @@');
+        }
+
+
+        // 배열
+        var inventory = ['단검', 'K2', '야전삽', '방탄모', '군화'];
+        var array = [100, 300, 2018, 777, 20000];
+        var allArray = [777, 'string', true, function(){}, { }, [100, 200, 300]];
+
+        console.log(inventory[0]);
+        console.log(array[2]);
+        console.log(allArray[4]);
+
+
+        var inventroy1 = ['사과', '포도', '수박', '딸기'];
+        var inventroy2 = ['단검', 'K2', '야전삽', '방탄모', '군화', '수통', '위장크림'];
+
+        console.log('inventroy1.length : ' + inventroy1.length);
+        console.log('inventroy2.length : ' + inventroy2.length);
+
+        inventroy1.push('바나나');
+        inventroy1.push('블루베리');
+        inventroy1.push('오렌지');
+
+        console.log('바나나, 블루베리, 오렌지가 inventroy1에 추가된 후');
+        console.log('inventory1.length : ' + inventroy1.length);
+        console.log('inventory2.length : ' + inventroy2.length);
+
+
+        // 문자열과 배열
+        var str = '이것은인간을향한평화의메세지입니다.';
+        console.log(str.length);
+        console.log(str[0]);
+        console.log(str[1]);
+        console.log(str[2]);
+        console.log(str);
+
+
+        // while 반복문
+        // while(불표현식){문장}
+        // 불표현식이 참인 동안 문장 계속실행.
+        var value = 1;
+
+        while(value < 11){
+            console.log(value + '번째 반복');
+            value++;
+        }
+
+        var startTime = new Date().getTime();
+
+        while(new Date().getTime() < startTime + 1000){ // 1,000밀리 = 1초
+            value++;
+        }
+        console.log(value);
+
+
+        // do while 반복문
+        // do{ 문장 }while( 불표현식 )
+        // 조건이 맞지 않아도 한번은 실행된다.
+        do{
+            var input = prompt('7을 입력하시오', '');
+        }while(input !=7);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

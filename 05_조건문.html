@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조건문</title>
+    <script>
+
+        // if 조건문
+        // if ( 불 표현식 ) { 문장 }
+        // 불 표현식이 true면 문장을 실행하고, false면 문장을 실행하지 않는다.
+        // 문장이 한 줄일 때는 중괄호 생략가능
+
+        var A, B;
+        A = prompt('A를 입력합니다.', '');
+        B = prompt('B를 입력합니다.', '');
+        if( A > B ){
+            console.log(A + '는 ' + B + ' 보다 크다.');
+        }else{
+            console.log(A + '는 ' + B + ' 보다 작다.');
+        }
+
+
+        var date = new Date();
+        var hour = date.getHours();
+
+        // if else 조건문
+        if( hour < 12 ){
+            console.log('아침');
+        }else{
+            console.log('점심');
+        }
+
+        // 중첩 조건문
+        if( hour < 11 ){
+            if( hour < 9 ){
+                console.log('아침 먹자');
+            }else{
+                console.log('아점 먹자');
+            }
+        }else{
+            if( hour < 15 ){
+                console.log('점심 먹자');
+            }else{
+                console.log('저녁 먹자');
+            }
+        }
+
+        // else if 조건문
+        if( hour < 11 ){
+            console.log('아침');
+        }else if( hour < 15 ){
+            console.log('점심');
+        }else{
+            console.log('저녁');
+        }
+
+
+        // 논리 연산자와 조건문
+        var score = Number(prompt('학점을 입력하세요', '학점'));
+
+        if( 4.0 < score && score < 4.5 ){
+            console.log('논리 연산자를 사용해 보았다.')
+        }
+
+
+        // switch 조건문
+        var day = date.getDay();
+        switch(day){
+            case 0 : console.log('일'); break;
+            case 1 : console.log('월'); break;
+            case 2 : console.log('화'); break;
+            case 3 : console.log('수'); break;
+            case 4 : console.log('목'); break;
+            case 5 : console.log('금'); break;
+            case 6 : console.log('토'); break;
+            default : console.log('오잉?'); break;
+        }
+
+
+        // 삼항 연산자
+        // 불표현식 ? 참이면 실행할 문장 : 거짓이면 실행할 문장
+        // 조건 ? true면 실행 : false면 실행
+        var input = prompt('숫자입력', '');
+        var number = Number(input);
+
+        (number > 0) ? console.log('자연수다.') : console.log('자연수가 아니다.');
+
+
+        // 짧은 조건문
+        // 참이 확실할 때 추가 연산을 진행하지 않는다.
+        true || console.log('실행될까요? AAA');
+        false || console.log('실행될까요? BBB');
+        
+
+        // 짧은 조건문2
+        input % 2 == 0 || console.log('홀수입니다.');
+        input % 2 == 0 && console.log('짝수입니다.');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

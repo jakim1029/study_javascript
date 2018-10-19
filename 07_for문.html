@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반복문</title>
+    <script>
+
+        // for 문
+        var box = ['책', '칼', '볼펜', '총', '야구방망이', '벽돌'];
+        for(var i = 0; i < box.length; i++){
+            document.write(box[i] + '<br>');
+        }
+
+        var inven = [
+            {
+                name : 'K2 소총',
+                atk : 100
+            },
+            {
+                name : '녹슨 수통',
+                atk : 20
+            },
+            {
+                name : '낡은 방탄모',
+                atk : 10
+            },
+            {
+                name : '날이 죽은 단검',
+                atk : 50
+            }
+        ];
+        for(var j = 0; j < inven.length; j++){
+            console.log(inven[j]);
+        }
+
+
+        // 역 for 반복문
+        var box = ['책', '칼', '볼펜', '총', '야구방망이', '벽돌'];
+        for(var i = box.length -1; i >= 0; i--){
+            document.write(box[i] + '<br>')
+        }
+
+
+        // 반복문을 사용한 브라우저 성능 테스트
+        var ST = new Date().getTime();
+        for(var cps = 0; new Date().getTime() < ST + 1000; cps++){
+            console.log('1000밀리초(1초) 동안 연산한 횟수 : ' + cps); 
+        }
+
+
+        // for in 반복문
+        // for (변수 in 객체) { 객체의 모든 열거할 수 있는 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문; }
+
+        var vertical1 = ['이', '것', '은', 'f', 'o', 'r', '문'];
+        for(var i = 0; i < vertical1.length; i++){
+            document.write(vertical1[i])
+        }
+
+        var vertical2 = ['이', '것', '은', 'f', 'o', 'r',' ', 'i', 'n', '문'];
+        for(var i in vertical2){
+            console.log('index' + i + ' : ', vertical2[i]);
+        }
+
+        // for in 문은 해당 객체가 가진 모든 프로퍼티를 반환하는 것이 아닌, 오직 열거할 수 있는 프로퍼티만 반환합니다.
+        var obj = [
+            { name : '티아라', age : 26 },
+            { name : '모모랜드', age : 24 },
+            { name : '트와이스', age : 22 }
+        ];
+        for(var i in obj){
+            document.write(i + ' : ' + obj[i].name + ', ' + obj[i].age + '<br>');
+        }
+
+
+        // 중첩 반복문
+        var output = '';
+        for(var i = 0; i < 10; i++){
+            for(var j = 0; j < i; j++){
+                output += '★';
+            }
+            output += '\n';
+        }
+        console.log(output);
+
+        for(var i = 0; i < 15; i++){
+            for(var j = 15; j > i; j--){
+                output += ' ';
+            }
+            for(var k = 0; k < 2 * i -1; k++){
+                output += '*';
+            }
+            output += '\n';
+        }
+        console.log(output);
+
+
+        // ECMAScript 6 에 등장한 for fo 반복문 (나중에)
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
