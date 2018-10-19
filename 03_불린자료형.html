@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boolean</title>
+    <script>
+
+        // 논리 부정 연산자
+
+        console.log("100 > 200 라는 명제는 " + (100 > 200) + " 입니다.");
+        console.log("100 < 200 라는 명제는 " + (100 < 200) + " 입니다.");
+
+        var age = 20;
+
+        if(age == 20){ // true
+            console.log('You\'re twenty years old.');
+        }
+        if(age == 19){ // false
+            console.log('You\'re naineteen years old.')
+        }
+        if(!(age == 18)){
+            console.log('You are not 18 years old.');
+        }
+
+
+        // 논리곱 연산자와 논리합 연산자
+        
+        var sun = 1;
+        var star = 'Infinity';
+        var iloveyou = 'true';
+
+        if(sun == 1 && star == 'Infinity'){
+            console.log('우주에 태양은 단 하나이며 별은 무수히 많다.')
+        }
+        if(sun == 2 && star == 'Infinity'){
+            console.log('우주에 태양은 2개이며, 별은 무수히 많다.')
+        }
+        if(sun == 3 && star == 'do no exist' || iloveyou){
+            console.log('우주에 태양은 3개다.\n' +
+                        '별은 존재하지 않는다.\n' +
+                        '나는 널 사랑한다.\n' +
+                        '이 세문장 중 하나는 진실이다');
+        }
+        if(sun == 9 || star == 'Infinity'){
+            console.log('\n' +
+                        'A : 우주에 태양은 9개다.');
+            console.log('B : 별은 무수히 많다.');
+            console.log('A와 B중 한명은 질실을 말하고 있다.')
+        }
+
+
+        // 비교 연산자만 사용
+
+         console.log( 30 > 20 > 10 ); // false
+         // console.log( true > 10 ) -> console.log( 1 > 10 ) -> console.log( false )
+
+         console.log( 30 > 20 && 20 > 10 ); // true
+         // console.log( true && true ) -> console.log( true )
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
